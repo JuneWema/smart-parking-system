@@ -10,7 +10,7 @@ main{
     background: mintcream;
 }
 .intro{
-    background-image:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(images/background.jpeg);
+    background-image:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../images/parking.jpeg);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
