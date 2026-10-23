@@ -1,0 +1,329 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    outline: none;
+    border: none;
+    box-sizing: border-box;
+    font-family: 'Times New Roman', Times, serif;
+}
+body{
+    display: flex;
+}
+.sidebar{
+    position: sticky;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 110px;
+    height: 100vh;
+    padding: 0 1.7rem;
+    color: #fff;
+    overflow: hidden;
+    transition: all 0.5s linear;
+    background: darkcyan;
+}
+.sidebar:hover{
+    width: 240px;
+    transition: 0.5s;
+}
+.logo{
+    height: 80px;
+    padding: 16px;
+}
+.menu{
+    height: 88%;
+    position: relative;
+    list-style: none;
+    padding: 0;
+}
+.menu li{
+    padding: 1rem;
+    margin: 8px 0;
+    border-radius: 8px;
+    transition: all o.5s ease-in-out;
+}
+.menu li:hover,
+.active{
+    background:darkkhaki;
+}
+.menu a{
+    color: #fff;
+    font-size: 14px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+.menu a span{
+    overflow: hidden;
+}
+.menu a i{
+    font-size: 1.2rem;
+}
+.logout{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+.main--content{
+    position: relative;
+    background: khaki;
+    width: 100%;
+    padding: 1rem;
+}
+.header--wrapper img{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.header--wrapper{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    background: mintcream;
+    border-radius: 10px;
+    padding: 10px 2rem;
+    margin-bottom: 1rem;
+}
+.header--title{
+    color: darkcyan;
+}
+.user--info{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+.search--box{
+    background: rgba(237, 237, 237);
+    border-radius: 15px;
+    color: rgba(113, 99, 186, 255);
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    padding: 4px 12px;
+}
+.search--box input{
+    background: transparent;
+    padding: 5px;
+}
+#search{
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: all 0.5s ease-out;
+}
+.search--box #search:hover{
+    transform: scale(1.2);
+}
+
+
+
+.parking--sections,
+.payment--section{
+    background: mintcream;
+    border-radius: 10px;
+    padding: 25px;
+    margin-bottom: 25px;
+    /* box-shadow: 0 3px 12px rgba(15, 38, 75, 0.06); */
+}
+.section--heading{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 750px;
+    margin-bottom: 20px;
+}
+.section--heading h2,
+.payment--heading h2{
+    font-size: 30px;
+    margin-bottom: 8px;
+    color: darkcyan;
+}
+.section--heading p,
+.payment--heading p{
+    color: darkcyan;
+    font-size: 15px;
+}
+.live--status{
+    color: #22C55E;
+    font-size: 14px;
+    white-space: nowrap;
+}
+.parking--grid{
+    display: grid;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    gap: 15px;
+}
+.parking--card{
+    border: 1px dashed;
+    border-radius: 10px;
+    padding: 20px 12px;
+    text-align: center;
+    background: #ffffff;
+    align-items: center;
+    gap: 15px;
+    display: flex;
+    flex-direction: column;
+}
+.parking--card h3{
+    font-size: 30px;
+}
+.car--icon{
+    width: 100%;
+    padding: 14px 0;
+    border-radius: 10px;
+    background: darkcyan;
+    font-size: 30px;
+}
+.available{
+    border: 5px solid #18a566;
+    background-color: #f2fbf6;
+}
+.available .car--icon{
+    background: #d9f4e5;
+}
+.available .status{
+    background: #159957;
+    border-radius: 8px;
+    padding: 8px;
+}
+.occupied{
+    border: 5px solid #d94b4b;
+    background: #fff7f7;
+}
+.occupied .car--icon{
+    background: #ffe5e5;
+}
+.occupied .status{
+    background: #e54848;
+    border-radius: 8px;
+    padding: 8px;
+}
+.booked{
+    border: 5px solid #175bc1;
+    background: #f0f5ff
+}
+.booked .car--icon{
+    background: #dbeafe;
+}
+.booked .status{
+    background: #175bc1;
+    border-radius: 8px;
+    padding: 8px;
+}
+.tabular--wrapper{
+    background: mintcream;
+    margin-top: 1rem;
+    border-radius: 10px;
+    padding: 2rem;
+    margin-bottom: 2rem;
+}
+.table--container{
+    width: 100%;
+}
+table{
+    width: 100%;
+    border-collapse: collapse;
+}
+thead{
+    background: darkcyan;
+    color: #fff;
+}
+th{
+    padding: 15px;
+    text-align: left;
+}
+tbody{
+    background: #f2f2f2;
+}
+td{
+    padding: 15px;
+    font-size: 14px;
+    color: #333;
+}
+tr:nth-child(even){
+    background: #fff;
+}
+tfoot{
+    background: darkcyan;
+}
+tfoot td{
+    padding: 15px;
+    text-align: center;
+    color: #fff;
+    font-weight: 600;
+    font-family: monospace;
+}
+.main--title{
+    color: darkcyan;
+    font-size: 30px;
+    margin-bottom: 25px;
+}
+.payment--section{
+    text-align: center;
+}
+.payment--form {
+    width: 100%;
+    max-width: 400px;
+    margin: 25px auto 0;
+}
+.payment {
+    display: flex;
+    align-items: center; 
+    justify-content: flex-start; 
+    gap: 20px; 
+    padding: 20px;
+    background: darkkhaki;
+    border-radius: 10px;
+}
+.payment--image img {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+    border-radius: 50%;
+}
+.payment--details {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.payment--details h2 {
+    margin: 0 0 8px;
+}
+.payment--details p {
+   margin-bottom: 25px;
+}
+.payment--details input {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+.payment--details label{
+    font-size: 20px;
+    font-weight: 700;
+    color: darkcyan;
+}
+.pay--btn{
+    background: darkcyan;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    font-size: 20px;
+    font-weight: 600;
+    width: 40%;
+    padding: 10px;
+    margin: 0 auto;
+    transition: all 0.5s ease;
+}
+.pay--btn:hover{
+    background: brown;
+    transform: scale(1.1);
+}
+.payment--note{
+    margin-top: 20px;
+}
