@@ -1,0 +1,150 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:'Times New Roman', Times, serif;
+}
+header{
+    position: fixed;
+    width: 100%;
+    left: 0;
+    top: 0;
+    background:darkcyan;
+    padding: 0 10px;
+}
+.navbar{
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+    justify-content: space-between;
+    max-width: 1200px;
+    padding: 22px 0;
+}
+.navbar .logo img{
+    width: 70px;
+}
+.navbar .secure{
+    display: flex;
+    gap: 35px;
+}
+.navbar .logo h2{
+    font-size: 1.7rem;
+    font-weight: 600;
+    margin: auto;
+}
+.navbar .logo{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    text-decoration: none;
+}
+img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+h3{
+    color: black;
+}
+.form-box{
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 420px;
+    padding: 50px;
+    background: darkkhaki;
+    border-radius: 14px;
+    margin-top: 28px;
+}
+main{
+    padding: 200px;
+}
+.login-container{
+    display: flex;
+    min-height: 70px;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    padding: 70px 20px;
+    background: mintcream;
+
+}
+.back{
+    display: inline-block;
+    text-decoration: none;
+    color: white;
+    font-size: 14px;
+    margin-bottom: 25px;
+}
+.back-button{
+    background: darkcyan;
+    width: 100%;
+    padding: 10px;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    transition: all 0.25s ease-in-out;
+}
+.back-button:hover{
+    background: brown;
+    transform: scaleX(1.1);
+}
+.form-box h2{
+    text-align: center;
+    font-size: 28px;
+    margin: 0 0 10px;
+}
+.subtitle{
+    text-align: center;
+    font-size: 15px;
+    margin-bottom: 30px;
+}
+.form-group{
+    margin-bottom: 20px;
+}
+.form-group label{
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+}
+.form-group input{
+    display: block;
+    width: 100%;
+    padding: 13px;
+    border: none;
+    border-radius: 10px;
+    box-sizing: border-box;
+    outline: none;
+}
+.forgot-password{
+    display: block;
+    text-align: right;
+    text-decoration: none;
+    color: black;
+    margin: 0 0 22px;
+}
+.forgot-password:hover{
+    color: maroon;
+}
+.login-button{
+    width: 100%;
+    margin-left: 125px;
+    padding: 14px;
+    background: darkcyan;
+    color: white;
+    text-decoration: none;
+    border: none;
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: bold;
+}
+.login-button:hover{
+    background: brown;
+}
+.account{
+    text-align: center;
+    margin: 25px 0 0;
+}
+.account a{
+    text-decoration: none;
+}
