@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Notification</title>
+        <script src="https://kit.fontawesome.com/6c491f9239.js"></script>
+        <link rel="stylesheet" href="notification.css">
+    </head>
+    <body>
+        <div class="sidebar">
+            <div class="logo"></div>
+            <ul class="menu">
+                <li>
+                    <a href="dashboard.html">
+                        <i class="fa-regular fa-house"></i>
+                        <span>Dashboard</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="booking.html">
+                        <i class="fa-solid fa-calendar"></i>
+                        <span>Book Space</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="feedback.html">
+                        <i class="fa-regular fa-comment-dots"></i>
+                        <span>Give Feedback</span>
+                    </a>
+                </li>
+                <li class="active">
+                    <a href="notification.html">
+                        <i class="fa-regular fa-bell"></i>
+                        <span>Notifications</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="contact.html">
+                        <i class="fa-solid fa-phone"></i>
+                        <span>Contact Us</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="settings.html">
+                       <i class="fa-solid fa-gear"></i>
+                        <span>Settings</span>
+                    </a>
+                </li>
+                <li class="logout">
+                    <a href="roleSelection.html">
+                        <i class="fa-solid fa-right-from-bracket"></i>
+                        <span>Log out</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="main--content">
+            <div class="header--wrapper">
+                <div class="header--title">
+                    <span>Hello,</span>
+                    <h2>Welcome Back</h2>
+                </div>
+                <div class="user--info">
+                    <div class="search--box">
+                        <i class="fa-solid fa-magnifying-glass" id="search"></i>
+                        <input type="text" placeholder="search"> 
+                    </div>
+                    <img src="images/Profile.jpg" alt="Sonia-Uche">
+                </div>
+            </div>
+            <div class="container">
+                <div class="notification-container">
+                    <header>
+                        <div class="notification-header">
+                            <h1>Notification</h1>
+                            <span id="num-of-notification"></span>
+                        </div>
+                        <p id="mark-as-read">Mark ALL read</p>
+                    </header>
+                    <main>
+                         <div class="notification unread">
+                            <img src="images/profs.jpeg" alt="Sonia Uche" class="photo">
+                            <div class="description">
+                                <p>Hello, kindly park at parking space 4. Have a nice day ahead!!</p>
+                                <p id="notifi-time">10:30 am</p>
+                            </div>
+                         </div>
+                         <div class="notification unread">
+                            <img src="images/profs.jpeg" alt="Sonia Uche" class="photo">
+                            <div class="description">
+                                <p>Hello, kindly park at parking space 1. Have a nice day ahead!!</p>
+                                <p id="notifi-time"> 08:00 am</p>
+                            </div>
+                         </div>  
+                         <div class="notification">
+                            <img src="images/profs.jpeg" alt="Sonia Uche" class="photo">
+                            <div class="description">
+                                <p>Hello, kindly park at parking space 3. Have a nice day ahead!!</p>
+                                <p id="notifi-time"> 38 mins ago</p>
+                            </div>
+                         </div>     
+                    </main>
+                </div>
+            </div>
+        </div>
+        <script src="notification.js"></script>
+    </body>
+</html>
