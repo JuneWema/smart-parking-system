@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta charset="UTF-8">
+        <title>Registration Form</title>
+        <link rel="stylesheet" href="../student/registration.css">
+        <script src="https://kit.fontawesome.com/6c491f9239.js"></script>
+    </head>
+    <body>
+        <header>
+            <nav class="navbar">
+                <a href="#" class="logo">
+                    <img src="images/strathlogo.png" alt="Logo">
+                    <h3>Strathmore <br> University</h3>
+                </a>
+                    <ul class="secure">
+                        <li>Park Smarter</li>
+                        <li>Save time</li>
+                        <li>Safer Campus</li>
+                    </ul>
+        </header>
+        <main class="reg-box">
+            <section class="reg-card">
+                <a href="staffLogin.html"><button class="back-login">Back to Log in</button></a>
+                <div class="page-heading">
+                    <span class="car"><img src="images/car.png" alt="car" width="70"></span>
+                    <h1>Create Account</h1>
+                    <p>Register to access parking at Strathmore University</p>
+                </div>
+                <form action="#" method="post">
+                    <fieldset class="form-section">
+                        <div class="section-heading">
+                            <span class="section-no">1</span>
+                            <h2>Personal Information</h2>
+                            <span class="section-icon"><i class="fa-solid fa-user"></i></span>
+                        </div>
+                        <div class="form-grid">
+                            <div class="form-group">
+                                <label for="fullName">Full Name</label>
+                                <input type="text" id="fullName" name="fullName" placeholder="Enter Full name">
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <input type="email" id="email" name="email" placeholder="Enter Email">
+                            </div>
+                            <div class="form-group">
+                                <label for="identification">Staff ID</label>
+                                <input type="text" id="identification" name="Identification" placeholder="Enter studentID">
+                            </div>
+                            <div class="form-group">
+                                <label for="phone">Phone Number</label>
+                                <input type="tel" id="telephone" name="telephone" placeholder="e.g 0720 100 100">
+                            </div>
+                        </div>
+                    </fieldset>
+                    <fieldset class="form-section">
+                        <div class="section-heading">
+                            <span class="section-no">2</span>
+                            <h2>Vehicle Information</h2>
+                            <span class="section-icon"><i class="fa-solid fa-car"></i></span>
+                        </div>
+                        <div class="form-grid">
+                            <div class="form-group">
+                                <label for="regNumber">Vehicle Registration Number</label>
+                                <input type="text" id="regNumber" name="regNumber" placeholder="e.g KDT 691E">
+                            </div>
+                            <div class="form-group">
+                                <label for="carType">Vehicle Type</label>
+                            </div>
+                            <div class="form-group">
+                                <select name="carType" id="carType">
+                                    <option value="saloon">Saloon</option>
+                                    <option value="suv">SUV</option>
+                                    <option value="van">van</option>
+                                    <option value="pickup">Pick-up</option>
+                                    <option value="other">Other</option>
+                                </select>
+                            </div>
+                        </div>
+                    </fieldset>
+                    <fieldset class="form-section">
+                        <div class="section-heading">
+                            <span class="section-no">3</span>
+                            <h2>Account Password</h2>
+                            <span class="section-icon"><i class="fa-solid fa-user-shield"></i></span>
+                        </div>
+                        <div class="form-grid">
+                            <div class="form-group">
+                                <label for="password">Password</label>
+                                <input type="password" id="password" name="password" minlength="8" placeholder="Enter your password">
+                            </div>
+                            <div class="form-group">
+                                <label for="confirmPassword">Confirm Password</label>
+                                <input type="password" id="confirmPassword" name="confirmPassword" minlength="8" placeholder="Re-enter your password">
+                            </div>
+                            <div class="password-guide">
+                                <span><i class="fa-solid fa-shield"></i></span>
+                                <div>
+                                    <strong>Password Requirements</strong>
+                                    <p>Use atleast 8 characters, including an uppercase letter, a lowercase letter a number and a special character</p>
+                                </div>
+                            </div>
+                        </div>
+                    </fieldset>
+                    <button type="submit" class="register-button">Create Account</button>
+                    <p class="login-prompt">Already have an account? <a href="staffLogin.html">Log in</a></p>
+                </form>
+            </section>
+        </main>
+    </body>
+</html>

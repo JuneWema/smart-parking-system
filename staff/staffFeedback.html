@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Feedback Form</title>
+        <script src="https://kit.fontawesome.com/6c491f9239.js"></script>
+        <link rel="stylesheet" href="../student/feedback.css"> 
+    </head>
+    <body>
+        <div class="sidebar">
+            <div class="logo"></div>
+            <ul class="menu">
+                <li>
+                    <a href="staffDashboard.html">
+                        <i class="fa-regular fa-house"></i>
+                        <span>Dashboard</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="staffBooking.html">
+                        <i class="fa-solid fa-calendar"></i>
+                        <span>Book Space</span>
+                    </a>
+                </li>
+                <li class="active">
+                    <a href="staffFeedback.html">
+                        <i class="fa-regular fa-comment-dots"></i>
+                        <span>Give Feedback</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="staffNotification.html">
+                        <i class="fa-regular fa-bell"></i>
+                        <span>Notifications</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="staffContact.html">
+                        <i class="fa-solid fa-phone"></i>
+                        <span>Contact Us</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="staffSettings.html">
+                       <i class="fa-solid fa-gear"></i>
+                        <span>Settings</span>
+                    </a>
+                </li>
+                <li class="logout">
+                    <a href="../role-selection/roleSelection.html">
+                        <i class="fa-solid fa-right-from-bracket"></i>
+                        <span>Log out</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="main--content">
+            <div class="header--wrapper">
+                <div class="header--title">
+                    <span>Hello,</span>
+                    <h2>Welcome Back</h2>
+                </div>
+                <div class="user--info">
+                    <div class="search--box">
+                        <i class="fa-solid fa-magnifying-glass" id="search"></i>
+                        <input type="text" placeholder="search"> 
+                    </div>
+                    <img src="images/Profile.jpg" alt="Sonia-Uche">
+                </div>
+            </div>
+            <div class="feedback--card">
+                <div class="header">
+                    <div class="icon">
+                        <i class="fa-solid fa-comment-dots"></i>
+                    </div>
+                    <h1>We'd love your feedback</h1>
+                    <p>Your feedback helps us improve and build a better solution and better experiences</p>
+                </div>
+                <form>
+                    <div class="form--group">
+                        <div class="input--row">
+                            <div>
+                                <label for="name" class="title">Your name</label>
+                                <input type="text" id="name" placeholder="June Wema"/>
+                            </div>
+                            <div>
+                                <label for="email" class="title">Email</label>
+                                <input type="email" id="email" placeholder="june.wema@gmail.com">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form--group">
+                        <label for="type" class="title">What would you like to tell us?</label>
+                        <select name="type" id="type">
+                            <option value="#">Suggest feedback type:</option>
+                            <option value="suggestions"> Suggestions </option>
+                            <option value="bug-report"> Bug Report </option>
+                            <option value="compliment"> Complement </option>
+                            <option value="complaint"> Complaint </option>
+                            <option value="other"> Other </option>
+                        </select>
+                    </div>
+                    <div class="form--group">
+                        <label for="#" class="title"> How was your experience? </label>
+                        <div class="experience">
+                            <input type="radio" name="experience" id="terrible">
+                            <label for="terrible">
+                                <i class="fa-solid fa-face-sad-cry yellow"></i>
+                                <span>Terrible</span>
+                            </label>
+                            <input type="radio" name="experience" id="bad">
+                            <label for="bad">
+                                <i class="fa-solid fa-face-frown yellow"></i>
+                                <span>Bad</span>
+                            </label>
+                            <input type="radio" name="experience" id="okay">
+                            <label for="okay">
+                                <i class="fa-solid fa-face-meh-blank yellow"></i>
+                                <span>Okay</span>
+                            </label>
+                            <input type="radio" name="experience" id="good">
+                            <label for="good">
+                                <i class="fa-solid fa-face-smile yellow"></i>
+                                <span>Good</span>
+                            </label>
+                            <input type="radio" name="experience" id="excellent">
+                            <label for="excellent">
+                               <i class="fa-solid fa-face-grin-hearts yellow"></i>
+                               <span>Excellent</span>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="form--group">
+                        <label for="#" class="title"> Rate your overall Experience: </label>
+                        <div class="stars">
+                            <input type="radio" name="rating" id="star1">
+                            <label for="star1">
+                                <i class="fa-solid fa-star"></i>
+                            </label>
+                            <input type="radio" name="rating" id="star2">
+                            <label for="star2">
+                                <i class="fa-solid fa-star"></i>
+                            </label>
+                            <input type="radio" name="rating" id="star3">
+                            <label for="star3">
+                                <i class="fa-solid fa-star"></i>
+                            </label>
+                            <input type="radio" name="rating" id="star4">
+                            <label for="star4">
+                                <i class="fa-solid fa-star"></i>
+                            </label>
+                            <input type="radio" name="rating" id="star5">
+                            <label for="star5">
+                                <i class="fa-solid fa-star"></i>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="form--group">
+                        <label for="message" class="title"> Tell us more </label>
+                        <textarea name="feedback" id="message" placeholder= "Kindly provide further ellaboration on your thoughts or experiences..." >  
+                        </textarea>
+                    </div>
+                    <button type="submit" class="submit--btn"> Send Feedback</button>
+                    <p class="privacy">
+                        <i class="fa-solid fa-lock"></i>
+                        Your feedback will only be used to improve our services.
+                    </p>
+                </form>
+            </div>
+        </div>
+    </body>
+</html>
+           
