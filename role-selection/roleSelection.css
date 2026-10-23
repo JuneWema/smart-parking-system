@@ -1,0 +1,111 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:'Times New Roman', Times, serif;
+}
+main{
+    padding-top: 100px;
+    background: mintcream;
+}
+.intro{
+    background-image:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(images/background.jpeg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 350px;
+    padding: 80px 5% 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.intro h2{
+    color: mintcream;
+    font-size: 40px;
+    font-weight: bold;
+}
+.intro p{
+    color: mintcream;
+    font-size: 20px;
+}
+.navbar .logo img{
+    width: 70px;
+}
+header{
+    position: fixed;
+    width: 100%;
+    left: 0;
+    top: 0;
+    background-color:darkcyan;
+    padding: 0 10px;
+}
+h3{
+    color: black;
+}
+.navbar{
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+    justify-content: space-between;
+    max-width: 1200px;
+    padding: 22px 0;
+}
+.navbar .secure{
+    display: flex;
+    gap: 35px;
+}
+.navbar .logo h2{
+    font-size: 1.7rem;
+    font-weight: 600;
+    margin: auto;
+}
+.navbar .logo{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    text-decoration: none;
+}
+img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.cont:hover{
+    background-color: brown;
+}
+.cont{
+    color: white;
+    border-radius: 15px;
+    padding: 10px 20px;
+    background-color:darkcyan;
+    border: none;
+    gap: 20px;
+}
+svg{
+    margin-left: 10px;
+    text-align: right;
+}
+.cont svg{
+    width: 1em;
+    height: 1em;
+}
+.role-box{
+    align-items: center;
+    display: grid;
+    padding: 30px 5%;
+    gap: 25px;
+    grid-template-columns: repeat(4 , 1fr);
+    transition: all 0.5s ease-in;
+}
+.student,.staff,.visitor,.admin{
+    min-height: 400px;
+    padding: 30px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border: none;
+    border-radius: 15px;
+    background-color:darkkhaki;
+    text-align: center;
+}
