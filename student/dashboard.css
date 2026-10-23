@@ -1,0 +1,251 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    outline: none;
+    border: none;
+    box-sizing: border-box;
+    font-family: 'Times New Roman', Times, serif;
+}
+body{
+    display: flex;
+}
+.sidebar{
+    position: sticky;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 110px;
+    height: 100vh;
+    padding: 0 1.7rem;
+    color: #fff;
+    overflow: hidden;
+    transition: all 0.5s linear;
+    background: darkcyan;
+}
+.sidebar:hover{
+    width: 240px;
+    transition: 0.5s;
+}
+.logo{
+    height: 80px;
+    padding: 16px;
+}
+.menu{
+    height: 88%;
+    position: relative;
+    list-style: none;
+    padding: 0;
+}
+.menu li{
+    padding: 1rem;
+    margin: 8px 0;
+    border-radius: 8px;
+    transition: all o.5s ease-in-out;
+}
+.menu li:hover,
+.active{
+    background:darkkhaki;
+}
+.menu a{
+    color: #fff;
+    font-size: 14px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+.menu a span{
+    overflow: hidden;
+}
+.menu a i{
+    font-size: 1.2rem;
+}
+.logout{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+
+.main--content{
+    position: relative;
+    background: khaki;
+    width: 100%;
+    padding: 1rem;
+}
+.header--wrapper img{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.header--wrapper{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    background: mintcream;
+    border-radius: 10px;
+    padding: 10px 2rem;
+    margin-bottom: 1rem;
+}
+.header--title{
+    color: darkcyan;
+}
+.user--info{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+.search--box{
+    background: rgba(237, 237, 237);
+    border-radius: 15px;
+    color: rgba(113, 99, 186, 255);
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    padding: 4px 12px;
+}
+.search--box input{
+    background: transparent;
+    padding: 5px;
+}
+#search{
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: all 0.5s ease-out;
+}
+.search--box #search:hover{
+    transform: scale(1.2);
+}
+
+
+.card--container{
+    background: mintcream;
+    padding: 2rem;
+    border-radius: 10px;
+}
+.card--wrapper{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+.main--title{
+    color: darkcyan;
+    padding-bottom: 10px;
+    font-size: 20px;
+}
+.parking--card{
+    background: rgba(229, 223, 223);
+    border-radius: 10px;
+    padding: 1.2rem;
+    width: 270px;
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: all 0.5s ease-in-out;
+}
+.parking--card:hover{
+    transform: translateY(-5px);
+}
+.card--header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.space{
+    display: flex;
+    flex-direction: column;
+}
+.title{
+    font-size: 20px;
+    font-weight: 400;
+}
+.space--value{
+    font-size: 24px;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 600;
+}
+#parking{
+    color: #fff;
+    padding: 1rem;
+    height: 40px;
+    width: 40px;
+    text-align: center;
+    border-radius: 50%;
+    background: red;
+}
+.card--detail{
+    font-size: 18px;
+    color: #777777;
+    letter-spacing: 2px;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.light-red{
+    background: rgb(255, 127, 127);
+}
+.light-purple{
+    background: rgb(218, 177, 218);
+}
+.light-green{
+    background: rgb(144, 238, 144);
+}
+.light-blue{
+    background: rgb(173, 216, 230);
+}
+.tabular--wrapper{
+    background: mintcream;
+    margin-top: 1rem;
+    border-radius: 10px;
+    padding: 2rem;
+}
+.table--container{
+    width: 100%;
+}
+table{
+    width: 100%;
+    border-collapse: collapse;
+}
+thead{
+    background: darkcyan;
+    color: #fff;
+}
+th{
+    padding: 15px;
+    text-align: left;
+}
+tbody{
+    background: #f2f2f2;
+}
+td{
+    padding: 15px;
+    font-size: 14px;
+    color: #333;
+}
+tr:nth-child(even){
+    background: #fff;
+}
+tfoot{
+    background: darkcyan;
+}
+tfoot td{
+    padding: 15px;
+    text-align: center;
+    color: #fff;
+    font-weight: 600;
+    font-family: monospace;
+    font-size: 20px;
+}
+.table--container button {
+    color:darkcyan;
+    background: none;
+    cursor: pointer;
+    font-size: 30px;
+}
+.table--container button:hover{
+    color: darkkhaki;
+}

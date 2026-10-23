@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Student Dashboard</title>
+        <script src="https://kit.fontawesome.com/6c491f9239.js"></script>
+        <link rel="stylesheet" href="dashboard.css"> 
+    </head>
+    <body>
+        <div class="sidebar">
+            <div class="logo"></div>
+            <ul class="menu">
+                <li class="active">
+                    <a href="dashboard.html">
+                        <i class="fa-regular fa-house"></i>
+                        <span>Dashboard</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="booking.html">
+                        <i class="fa-solid fa-calendar"></i>
+                        <span>Book Space</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="feedback.html">
+                        <i class="fa-regular fa-comment-dots"></i>
+                        <span>Give Feedback</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="notification.html">
+                        <i class="fa-regular fa-bell"></i>
+                        <span>Notifications</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="contact.html">
+                        <i class="fa-solid fa-phone"></i>
+                        <span>Contact Us</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="settings.html">
+                       <i class="fa-solid fa-gear"></i>
+                        <span>Settings</span>
+                    </a>
+                </li>
+                <li class="logout">
+                    <a href="roleSelection.html">
+                        <i class="fa-solid fa-right-from-bracket"></i>
+                        <span>Log out</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="main--content">
+            <div class="header--wrapper">
+                <div class="header--title">
+                    <span>Hello,</span>
+                    <h2>Welcome Back</h2>
+                </div>
+                <div class="user--info">
+                    <div class="search--box">
+                        <i class="fa-solid fa-magnifying-glass" id="search"></i>
+                        <input type="text" placeholder="search"> 
+                    </div>
+                    <img src="images/Profile.jpg" alt="Sonia-Uche">
+                </div>
+            </div>
+            <div class="card--container">
+                <h3 class="main--title">Today's data</h3>
+                <div class="card--wrapper">
+                    <div class="parking--card light-purple">
+                        <div class="card--header">
+                            <div class="space">
+                                <span class="title">Total Spaces</span>
+                                <span class="space--value">5</span>
+                            </div>
+                            <i class="fa-solid fa-car dark-purple" id="parking" style="background: purple;"></i>
+                        </div>
+                        <span class="card--detail">**** **** ****</span>
+                    </div>
+                    <div class="parking--card light-green">
+                        <div class="card--header">
+                            <div class="space">
+                                <span class="title">Available Spaces</span>
+                                <span class="space--value">3</span>
+                            </div>
+                            <i class="fa-solid fa-car" id="parking" style="background: darkgreen;"></i>
+                        </div>
+                        <span class="card--detail">**** **** ****</span>
+                    </div>
+                    <div class="parking--card light-blue">
+                        <div class="card--header">
+                            <div class="space">
+                                <span class="title">Booked Spaces</span>
+                                <span class="space--value">1</span>
+                            </div>
+                            <i class="fa-solid fa-car" id="parking" style="background: darkblue;"></i>
+                        </div>
+                        <span class="card--detail">**** **** ****</span>
+                    </div>
+                    <div class="parking--card light-red">
+                        <div class="card--header">
+                            <div class="space">
+                                <span class="title">Occupied Spaces</span>
+                                <span class="space--value">1</span>
+                            </div>
+                            <i class="fa-solid fa-car" id="parking"></i>
+                        </div>
+                        <span class="card--detail">**** **** ****</span>
+                    </div>
+                </div>
+            </div>
+            <div class="tabular--wrapper">
+                <h3 class="main--title">Parking History</h3>
+                <div class="table--container">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Date</th>
+                                <th>Time in</th>
+                                <th>Time out</th>
+                                <th>Category</th>
+                                <th>Vehicle NO.</th>
+                                <th>Parking NO.</th>
+                                <th>Download</th>
+                            </tr>
+                            <tbody>
+                                <tr>
+                                    <td>10-09-2026</td>
+                                    <td>10:18 am</td>
+                                    <td>3:30 pm</td>
+                                    <td>Student</td>
+                                    <td>KDT 691E</td>
+                                    <td> 3 </td>
+                                    <td><button><i class="fa-solid fa-download"></i></button></td>
+                                </tr>
+                                <tr>
+                                    <td>11-09-2026</td>
+                                    <td>8:00 am</td>
+                                    <td>3:30 pm</td>
+                                    <td>Student</td>
+                                    <td>KDT 691E</td>
+                                    <td> 1 </td>
+                                    <td><button><i class="fa-solid fa-download"></i></button></td>
+                                </tr>
+                                <tr>
+                                    <td>12-09-2026</td>
+                                    <td>10:30 am</td>
+                                    <td>3:30 pm</td>
+                                    <td>Student</td>
+                                    <td>KDT 691E</td>
+                                    <td> 4 </td>
+                                    <td><button><i class="fa-solid fa-download"></i></button></td>
+                                </tr>
+                            </tbody>
+                            <tfoot>
+                                <tr>
+                                    <td colspan="7">Karibu Strathmore University</td>
+                                </tr>
+                            </tfoot>
+                        </thead>
+                    </table>
+                </div>
+            </div>
+        </div>        
+    </body>
+</html>
