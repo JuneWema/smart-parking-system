@@ -214,6 +214,19 @@ body{
     border-radius: 8px;
     padding: 8px;
 }
+a{
+    text-decoration: none;
+    color: white;
+}
+.book{
+    background: #333;
+    padding: 8px;
+    border: none;
+    border-radius: 5px;
+}
+.book:hover{
+    background: #d94b4b;
+}
 .tabular--wrapper{
     background: mintcream;
     margin-top: 1rem;
@@ -264,66 +277,4 @@ tfoot td{
 }
 .payment--section{
     text-align: center;
-}
-.payment--form {
-    width: 100%;
-    max-width: 400px;
-    margin: 25px auto 0;
-}
-.payment {
-    display: flex;
-    align-items: center; 
-    justify-content: flex-start; 
-    gap: 20px; 
-    padding: 20px;
-    background: darkkhaki;
-    border-radius: 10px;
-}
-.payment--image img {
-    width: 60px;
-    height: 60px;
-    object-fit: contain;
-    border-radius: 50%;
-}
-.payment--details {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-}
-.payment--details h2 {
-    margin: 0 0 8px;
-}
-.payment--details p {
-   margin-bottom: 25px;
-}
-.payment--details input {
-    width: 100%;
-    box-sizing: border-box;
-    padding: 12px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-}
-.payment--details label{
-    font-size: 20px;
-    font-weight: 700;
-    color: darkcyan;
-}
-.pay--btn{
-    background: darkcyan;
-    color: #fff;
-    border: none;
-    border-radius: 10px;
-    font-size: 20px;
-    font-weight: 600;
-    width: 40%;
-    padding: 10px;
-    margin: 0 auto;
-    transition: all 0.5s ease;
-}
-.pay--btn:hover{
-    background: brown;
-    transform: scale(1.1);
-}
-.payment--note{
-    margin-top: 20px;
 }
