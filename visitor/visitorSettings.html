@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://kit.fontawesome.com/6c491f9239.js"></script>
+        <link rel="stylesheet" href="../student/settings.css"> 
+        <title>Settings</title>
+    </head>
+    <body>
+        <div class="sidebar">
+            <div class="logo"></div>
+            <ul class="menu">
+                <li>
+                    <a href="visitorDashboard.html">
+                        <i class="fa-regular fa-house"></i>
+                        <span>Dashboard</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="visitorFeedback.html">
+                        <i class="fa-regular fa-comment-dots"></i>
+                        <span>Give Feedback</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="visitorNotification.html">
+                        <i class="fa-regular fa-bell"></i>
+                        <span>Notifications</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="visitorContact.html">
+                        <i class="fa-solid fa-phone"></i>
+                        <span>Contact Us</span>
+                    </a>
+                </li>
+                <li class="active">
+                    <a href="visitorSettings.html">
+                       <i class="fa-solid fa-gear"></i>
+                        <span>Settings</span>
+                    </a>
+                </li>
+                <li class="logout">
+                    <a href="../role-selection/roleSelection.html">
+                        <i class="fa-solid fa-right-from-bracket"></i>
+                        <span>Log out</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="main--content">
+            <div class="header--wrapper">
+                <div class="header--title">
+                    <span>Hello,</span>
+                    <h2>Welcome Back</h2>
+                </div>
+                <div class="user--info">
+                    <div class="search--box">
+                        <i class="fa-solid fa-magnifying-glass" id="search"></i>
+                        <input type="text" placeholder="search"> 
+                    </div>
+                    <img src="../images/visitor.jpeg" alt="Ntokozo Mbambo">
+                </div>
+            </div>
+            <div class="setting-section">
+                <div class="setting-form-container">
+                    <div class="row-1">
+                        <div class="rol1-text">
+                            <p class="heading">Settings</p>
+                            <p class="desc">Manage your account settings and preferences</p>
+                        </div>
+                        <div class="rol1-btn">
+                            <button type="submit" class="submit">
+                               <i class="fa-solid fa-floppy-disk"></i>
+                               <span>Save Changes</span> 
+                            </button>
+                        </div>
+                    </div>
+                    <div class="profile-info-section">
+                        <div class="profile-section">
+                            <p class="sec-heading">Personal Information</p>
+                            <p class="sec-desc">Update your personal details</p>
+                            <div class="profile-info-card">
+                                <div class="pr-img-box">
+                                    <img src="../images/visitor.jpeg" alt="Ntokozo Mbambo" class="pr-img">
+                                    <i class="fa-solid fa-pencil" id="pencil"></i>
+                                </div>
+                                <div class="pr-input-box">
+                                    <div class="pr-row1">
+                                        <div class="full-name-box">
+                                            <label for="fullName">Full Name</label>
+                                            <input type="text" name="fullName" id="fullName" class="full-name" placeholder="Enter full name">
+                                        </div>
+                                        <div class="full-name-box">
+                                            <label for="email">Email</label>
+                                            <input type="email" name="email" id="email" class="full-name" placeholder="Enter your email">
+                                        </div>
+                                    </div>
+                                    <div class="pr-row2">
+                                        <div class="full-name-box">
+                                            <label for="telephone">Phone Number</label>
+                                            <input type="tel" name="telephone" id="telephone" class="full-name" placeholder="+254 704 100 100">
+                                        </div>
+                                        <div class="full-name-box">
+                                            <label for="studentId">National ID</label>
+                                            <input type="text" name="staffId" id="staffId" class="full-name" placeholder="+254 704 100 100">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="vehivle-information-section profile-info-section">
+                        <div class="profile-section">
+                            <p class="sec-heading">Vehicle Information</p>
+                            <p class="sec-desc">Update your vehicle details</p>
+                            <div class="account-setting-card profile-info-card">
+                                <div class="pr-input-box">
+                                    <div class="pr-row1">
+                                        <div class="full-name-box">
+                                            <label for="regNumber">Vehicle Number</label>
+                                            <input type="text" name="regNumber" id="regNumber" class="full-name" placeholder="e.g, KDA 691E">
+                                        </div>
+                                        <div class="full-name-box">
+                                            <label for="color">Vehicle color</label>
+                                            <input type="text" name="color" id="color" class="full-name" placeholder="e.g, silver">
+                                        </div>
+                                        <div class="full-name-box">
+                                            <label for="telephone">Vehicle Type</label>
+                                           <select name="vehicleType" id="vehicleType" class="full-name">
+                                            <option value="saloon">Saloon</option>
+                                            <option value="suv">SUV</option>
+                                            <option value="van">Van</option>
+                                            <option value="pick-up">Pick-up</option>
+                                            <option value="other">Other</option>
+                                           </select>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="security-section profile-info-section">
+                        <div class="profile-section">
+                            <p class="sec-heading">Security</p>
+                            <p class="sec-desc">Manage your password and account security</p>
+                            <div class="sec-rol1">
+                                <div class="pass">
+                                    <label for="password">Password</label>
+                                    <p class="pass-text">********</p>
+                                </div>
+                                <div class="pass-change-btn">
+                                    <button class="pass-ch-btn">
+                                        <i class="fa-solid fa-lock"></i>
+                                        <span class="pass-ch-text">Change Password</span>
+                                    </button>
+                                </div>
+                                <div class="two-factor">
+                                    <label for="two" class="fact">Two-Factor Authentication</label>
+                                    <p class="two-ch-text two-gap fact">Add an extra layer of security to</p>
+                                    <p class="two-ch-text fact">your account .</p>
+                                </div>
+                                <div class="enable-two-factor">
+                                    <button class="two-fact-btn">
+                                        <i class="fa-solid fa-shield"></i>
+                                        <span class="two-fact-text">Enable 2FA</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div> 
+        </div>    
+    </body>
+</html>
