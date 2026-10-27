@@ -314,3 +314,13 @@ tfoot td{
     font-family: monospace;
     font-size: 20px;
 }
+.actives{
+    color: green;
+    font-weight: 600;
+    font-size: 15px;
+}
+.expire{
+    color: red;
+    font-size: 15px;
+    font-weight: 700;
+}

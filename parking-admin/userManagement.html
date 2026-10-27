@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Admin Dashboard</title>
+        <script src="https://kit.fontawesome.com/6c491f9239.js"></script>
+        <link rel="stylesheet" href="userManagement.css"> 
+    </head>
+    <body>
+        <div class="sidebar">
+            <div class="logo"></div>
+            <ul class="menu">
+                <li class="active">
+                    <a href="adminDashboard.html">
+                        <i class="fa-regular fa-house"></i>
+                        <span>Dashboard</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="ParkingSpaces.html">
+                        <i class="fa-solid fa-square-parking"></i>
+                        <span>Parking Spaces</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="userManagement.html">
+                       <i class="fa-solid fa-users"></i>
+                        <span>Manage Users</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="visitorAccess.html">
+                        <i class="fa-solid fa-question"></i>
+                        <span>Visitor Requests</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="bookingRecords.html">
+                        <i class="fa-regular fa-calendar-days"></i>
+                        <span>Booking Records</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="parkingReports.html">
+                       <i class="fa-solid fa-chart-simple"></i>
+                        <span>Parking Reports</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="adminNotifications.html">
+                       <i class="fa-regular fa-bell"></i>
+                        <span>Notifications</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="feedbackManagement.html">
+                       <i class="fa-regular fa-comment-dots"></i>
+                        <span>Feedback Management</span>
+                    </a>
+                </li>
+                <li class="logout">
+                    <a href="../role-selection/roleSelection.html">
+                        <i class="fa-solid fa-right-from-bracket"></i>
+                        <span>Log out</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="main--content">
+            <div class="header--wrapper">
+                <div class="header--title">
+                    <span>Hello,</span>
+                    <h2>Welcome Back</h2>
+                </div>
+                <div class="user--info">
+                    <div class="search--box">
+                        <i class="fa-solid fa-magnifying-glass" id="search"></i>
+                        <input type="text" placeholder="search"> 
+                    </div>
+                    <img src="../images/parking-placeholder.png" alt="Parking Administrator">
+                </div>
+            </div>
+            <div class="content">
+                <div class="page-heading">
+                    <h1>User Account Management</h1>
+                    <p>Manage student, staff, visitor and Administrator accounts</p>
+                </div>
+                <button class="primary" id="addUserBtn"> + Add new user</button>
+            </div>
+            <div class="stats">
+                <div class="stat-card">
+                    <div class="stat-icon blue">
+                        <!--grad hat-->
+                    </div>
+                    <div> 
+                        <p>Students</p>
+                        <h2 id="studentCount">10</h2>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon purple">
+                        <!--briefcase-->
+                    </div>
+                    <div> 
+                        <p>Staffs</p>
+                        <h2 id="staffCount">5</h2>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon green">
+                        <!--visitors-->
+                    </div>
+                    <div> 
+                        <p>Visitors</p>
+                        <h2 id="visitortCount">3</h2>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon orange">
+                        <!--administrators-->
+                    </div>
+                    <div> 
+                        <p>Administrators</p>
+                        <h2 id="adminCount">10</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="table-card">
+                <div class="toolbar">
+                    <input type="search" id="searchInput" placeholder="Search by ID">
+                    <select name="#" id="roleFilter">
+                        <option value="all">All users</option>
+                        <option value="student">Students</option>
+                        <option value="staff">Staffs</option>
+                        <option value="visitor">Visitors</option>
+                        <option value="admin">Administrators</option>
+                    </select>
+                </div>
+                <div class="table-wrapper">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Name</th>
+                                <th>Category</th>
+                                <th>Email</th>
+                                <th>Status</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody id="userTableBody"></tbody>
+                        <!--t footer-->
+                    </table>
+                    <p id="emptyMessage" class="empty-search">No users match your search</p>
+                </div>
+                <div class="table-footer">
+                    <span id="resultCount">Showing 0 users</span>
+                </div>
+            </div>
+        </div>
+        <div class="modal-backdrop">
+            <div class="modal">
+                <div class="modal-header">
+                    <h2 id="modalTitle">Add new User</h2>
+                    <button type="button" id="closeModal" class="close-btn">
+                        <i class="fa-solid fa-x"></i>  
+                    </button>
+                </div>
+                <form action="#" id="UserForm">
+                    
+
+                </form>
+            </div>
+        </div>
+    </body>
+</html>
