@@ -6,12 +6,13 @@
         <title>Registration Form</title>
         <link rel="stylesheet" href="registration.css">
         <script src="https://kit.fontawesome.com/6c491f9239.js"></script>
+        <script defer src="./registration.js"></script>
     </head>
     <body>
         <header>
             <nav class="navbar">
                 <a href="#" class="logo">
-                    <img src="image/logo.png" alt="Logo">
+                    <img src="../images/Strah-logo.png" alt="Logo">
                     <h3>Strathmore <br> University</h3>
                 </a>
                     <ul class="secure">
@@ -24,11 +25,11 @@
             <section class="reg-card">
                 <a href="login.html"><button class="back-login">Back to Log in</button></a>
                 <div class="page-heading">
-                    <span class="car"><img src="image/blue-car.png" alt="car" width="70"></span>
+                    <span class="car"><img src="../images/parked-car.png" alt="car" width="70"></span>
                     <h1>Create Account</h1>
                     <p>Register to access parking at Strathmore University</p>
                 </div>
-                <form action="#" method="post" id="registrationForm">
+                <form action="../student/student-backend/registration.php" method="post" id="studentRegForm">
                     <fieldset class="form-section">
                         <div class="section-heading">
                             <span class="section-no">1</span>
@@ -38,19 +39,23 @@
                         <div class="form-grid">
                             <div class="form-group">
                                 <label for="fullName">Full Name</label>
-                                <input type="text" id="fullName" name="fullName" placeholder="June Wema Bobo">
+                                <input type="text" id="fullName" name="fullName" placeholder=" e.g, June Wema">
+                                <div class="error-message"></div>
                             </div>
                             <div class="form-group">
                                 <label for="email">Email</label>
-                                <input type="email" id="email" name="email" placeholder="june.bobo@strathmore.edu">
+                                <input type="text" id="email" name="email" placeholder="e.g, name@gmail.com">
+                                <div class="error-message"></div>
                             </div>
                             <div class="form-group">
                                 <label for="identification">Student ID</label>
-                                <input type="text" id="identification" name="Identification" placeholder="e.g, 225180">
+                                <input type="text" id="identification" name="identification" placeholder="e.g, 225180">
+                                <div class="error-message"></div>
                             </div>
                             <div class="form-group">
                                 <label for="phone">Phone Number</label>
-                                <input type="tel" id="telephone" name="telephone" placeholder="e.g 0720 100 100">
+                                <input type="tel" id="telephone" name="telephone" placeholder="e.g, 0720 100 100">
+                                 <div class="error-message"></div>
                             </div>
                         </div>
                     </fieldset>
@@ -63,19 +68,22 @@
                         <div class="form-grid">
                             <div class="form-group">
                                 <label for="regNumber">Vehicle Registration Number</label>
-                                <input type="text" id="regNumber" name="regNumber" placeholder="e.g KDT 691E">
+                                <input type="text" id="regNumber" name="regNumber" placeholder="e.g, KDT 691E">
+                                <div class="error-message"></div>
                             </div>
                             <div class="form-group">
                                 <label for="carType">Vehicle Type</label>
                             </div>
                             <div class="form-group">
                                 <select name="carType" id="carType">
+                                    <option value="" disabled selected>Select Vehicle Type:</option>
                                     <option value="saloon">Saloon</option>
                                     <option value="suv">SUV</option>
-                                    <option value="van">van</option>
+                                    <option value="van">Van</option>
                                     <option value="pickup">Pick-up</option>
                                     <option value="other">Other</option>
                                 </select>
+                                <div class="error-message"></div>
                             </div>
                         </div>
                     </fieldset>
@@ -87,12 +95,14 @@
                         </div>
                         <div class="form-grid">
                             <div class="form-group">
-                                <label for="password">Password</label>
-                                <input type="password" id="password" name="password" minlength="8" placeholder="Enter your password">
+                                <label for="pass1">Password</label>
+                                <input type="password" id="pass1" name="pass1" placeholder="Enter your password">
+                                <div class="error-message"></div>
                             </div>
                             <div class="form-group">
-                                <label for="confirmPassword">Confirm Password</label>
-                                <input type="password" id="confirmPassword" name="confirmPassword" minlength="8" placeholder="Re-enter your password">
+                                <label for="pass2">Confirm Password</label>
+                                <input type="password" id="pass2" name="pass2" placeholder="Re-enter your password">
+                                <div class="error-message"></div>
                             </div>
                             <div class="password-guide">
                                 <span><i class="fa-solid fa-shield"></i></span>
@@ -103,7 +113,7 @@
                             </div>
                         </div>
                     </fieldset>
-                    <button type="submit" class="register-button" id="x">Create Account</button>
+                    <button type="submit" class="register-button" id="regBtn">Create Account</button>
                     <p class="login-prompt">Already have an account? <a href="login.html">Log in</a></p>
                 </form>
             </section>
