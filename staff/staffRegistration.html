@@ -4,7 +4,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta charset="UTF-8">
         <title>Registration Form</title>
-        <link rel="stylesheet" href="../student/registration.css">
+        <link rel="stylesheet" href="staffRegistration.css">
         <script src="https://kit.fontawesome.com/6c491f9239.js"></script>
     </head>
     <body>
@@ -28,7 +28,7 @@
                     <h1>Create Account</h1>
                     <p>Register to access parking at Strathmore University</p>
                 </div>
-                <form action="#" method="post">
+                <form action="#" method="post" id="staffForm">
                     <fieldset class="form-section">
                         <div class="section-heading">
                             <span class="section-no">1</span>
@@ -36,21 +36,25 @@
                             <span class="section-icon"><i class="fa-solid fa-user"></i></span>
                         </div>
                         <div class="form-grid">
-                            <div class="form-group">
+                            <div class="form-group error">
                                 <label for="fullName">Full Name</label>
                                 <input type="text" id="fullName" name="fullName" placeholder="Enter Full name">
+                                <div class="error"></div>
                             </div>
-                            <div class="form-group">
+                            <div class="form-group success">
                                 <label for="email">Email</label>
-                                <input type="email" id="email" name="email" placeholder="Enter Email">
+                                <input type="text" id="email" name="email" placeholder="Enter Email">
+                                <div class="error"></div>
                             </div>
                             <div class="form-group">
                                 <label for="identification">Staff ID</label>
                                 <input type="text" id="identification" name="Identification" placeholder="Enter studentID">
+                                <div class="error"></div>
                             </div>
                             <div class="form-group">
                                 <label for="phone">Phone Number</label>
                                 <input type="tel" id="telephone" name="telephone" placeholder="e.g 0720 100 100">
+                                <div class="error"></div>
                             </div>
                         </div>
                     </fieldset>
@@ -64,6 +68,7 @@
                             <div class="form-group">
                                 <label for="regNumber">Vehicle Registration Number</label>
                                 <input type="text" id="regNumber" name="regNumber" placeholder="e.g KDT 691E">
+                                <div class="error"></div>
                             </div>
                             <div class="form-group">
                                 <label for="carType">Vehicle Type</label>
@@ -89,10 +94,12 @@
                             <div class="form-group">
                                 <label for="password">Password</label>
                                 <input type="password" id="password" name="password" minlength="8" placeholder="Enter your password">
+                                <div class="error"></div>
                             </div>
                             <div class="form-group">
                                 <label for="confirmPassword">Confirm Password</label>
                                 <input type="password" id="confirmPassword" name="confirmPassword" minlength="8" placeholder="Re-enter your password">
+                                <div class="error"></div>
                             </div>
                             <div class="password-guide">
                                 <span><i class="fa-solid fa-shield"></i></span>
@@ -108,5 +115,7 @@
                 </form>
             </section>
         </main>
+
+        <script src="staffRegistration.js"></script>
     </body>
 </html>

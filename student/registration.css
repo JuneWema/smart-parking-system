@@ -23,6 +23,7 @@ header{
 }
 .navbar .logo img{
     width: 70px;
+    height: 40px;
 }
 .navbar .secure{
     display: flex;
@@ -64,6 +65,7 @@ h3{
     background: darkkhaki;
     max-width: 500px;
     width: 100%;
+    border-radius: 14px;
 }
 .back-login{
     display: block;
@@ -142,7 +144,7 @@ a{
     width: 100%;
     min-height: 43px;
     padding: 11px 13px;
-    border: 1px solid;
+    border: 2px solid;
     border-radius: 7px;
 }
 .password-guide{
@@ -175,4 +177,20 @@ a{
 .register-button:hover{
     background: maroon;
     transform: scaleY(1.2);
+}
+
+
+.form-group.error input,
+.form-group.error select { 
+    border-color: #C94A29;
+}
+.form-group.success input,
+.form-group.success select {
+    border-color: #046307;
+ }
+.error-message{
+    color: #C94A29;
+    font-size: 0.8rem;
+    min-height: 1em;
+    font-weight: 600;
 }

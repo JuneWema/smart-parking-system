@@ -110,28 +110,27 @@ main{
     display: block;
     width: 100%;
     padding: 13px;
-    border: none;
+    border: 2px solid black;
     border-radius: 10px;
     box-sizing: border-box;
     outline: none;
 }
 .forgot-password{
     display: block;
-    text-align: right;
+    text-align: left;
     text-decoration: none;
     color: black;
     margin: 0 0 22px;
+    color: darkcyan;
 }
 .forgot-password:hover{
     color: maroon;
 }
 .login-button{
     width: 100%;
-    margin-left: 125px;
     padding: 14px;
     background: darkcyan;
     color: white;
-    text-decoration: none;
     border: none;
     border-radius: 8px;
     font-size: 15px;
@@ -146,4 +145,21 @@ main{
 }
 .account a{
     text-decoration: none;
+}
+
+.error-text { 
+    color: #C94A29; 
+    font-size: 0.8rem; 
+    min-height: 1em;
+    font-weight: 600;
+}
+.login-error { 
+    color: #C94A29;
+     text-align: center;
+}
+.form-group.error input { 
+    border-color: #C94A29; 
+}
+.form-group.success input { 
+    border-color: #046307; 
 }

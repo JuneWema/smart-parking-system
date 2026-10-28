@@ -1,0 +1,187 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:'Times New Roman', Times, serif;
+}
+header{
+    position: fixed;
+    width: 100%;
+    left: 0;
+    top: 0;
+    background-color:darkcyan;
+    padding: 0 10px;
+}
+.navbar{
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+    justify-content: space-between;
+    max-width: 1200px;
+    padding: 22px 0;
+}
+.navbar .logo img{
+    width: 70px;
+}
+.navbar .secure{
+    display: flex;
+    gap: 35px;
+}
+.navbar .logo h2{
+    font-size: 1.7rem;
+    font-weight: 600;
+    margin: auto;
+}
+.navbar .logo{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    text-decoration: none;
+}
+img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+h3{
+    color: black;
+}
+.reg-box{
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    min-height: 70px;
+    padding: 70px 20px;
+    box-sizing: border-box;
+    background: mintcream;
+    margin-top: 28px;
+    border-radius: 14px;
+}
+.reg-card{
+    box-sizing: border-box;
+    padding: 50px;
+    background: darkkhaki;
+    max-width: 500px;
+    width: 100%;
+}
+.back-login{
+    display: block;
+    margin-bottom: 16px;
+    background: darkcyan;
+    font-weight: 600;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+}
+a{
+    text-decoration: none;
+}
+.back-login:hover{
+    background: maroon;
+}
+.page-heading{
+    text-align: center;
+    margin-bottom: 25px;
+}
+.page-heading h1{
+    margin-bottom: 8px;
+}
+.page-heading p{
+    font-size: 16px;
+}
+.form-section{
+    width: 100%;
+    border-radius: 10px;
+    padding: 22px 21px 24px;
+    margin-bottom: 20px;
+    display: block;
+}
+.section-heading{
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 22px;
+}
+.section-heading h2{
+    font-size: 19px;
+    margin-bottom: 5px;
+}
+.section-no{
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 35%;
+    font-weight: bold;
+    font-size: 20px;
+}
+.section-icon{
+    margin-left: auto;
+    font-size: 25px;
+}
+.form-grid{
+    display: grid;
+    grid-template-columns: repeat(1);
+    gap: 20px 25px;
+    width: 100%;
+}
+.form-group{
+    width: 100%;
+    min-width: 0;
+    position: relative;
+} 
+.form-group label{
+    display: block;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+.form-group input, .form-group select{
+    display: block;
+    width: 100%;
+    min-height: 43px;
+    padding: 11px 13px;
+    border: 2px solid;
+    border-radius: 7px;
+}
+.password-guide{
+    display: flex;
+    align-items: flex-start;
+    gap: 13px;
+    margin-top: 20px;
+    padding: 15px;
+    border: 1px dashed;
+    border-radius: 8px;
+}
+.password-guide strong{
+    display: block;
+    margin-bottom: 3px;
+}
+.password-guide > span{
+    font-weight: 25px;
+}
+.register-button{
+    width: 100%;
+    padding: 10px;
+    color: white;
+    background: darkcyan;
+    border: none;
+    border-radius: 10px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    transition: all 0.5s ease-in-out;
+}
+.register-button:hover{
+    background: maroon;
+    transform: scaleY(1.2);
+}
+
+
+.form-group.error input{
+    border-color: #ff3860;
+}
+.form-group.success input{
+    border-color: #09c372;
+}

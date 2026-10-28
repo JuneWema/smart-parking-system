@@ -10,34 +10,42 @@
          <header>
             <nav class="navbar">
                 <a href="#" class="logo">
-                    <img src="image/logo.png" alt="Logo" width="45%">
+                    <img src="../images/Strah-logo.png" alt="Logo" width="45%">
                     <h3>Strathmore <br> University</h3>
                 </a>
-                    <ul class="secure">
-                        <li>Park Smarter</li>
-                        <li>Save time</li>
-                        <li>Safer Campus</li>
-                    </ul>
+                <ul class="secure">
+                    <li>Park Smarter</li>
+                    <li>Save time</li>
+                    <li>Safer Campus</li>
+                </ul>
+            </nav>
         </header>
         <main class="login-container">
             <section class="form-box">
                 <a href="../role-selection/roleSelection.html" class="back"> <button class="back-button">Go Back</button></a>
                 <h2>Welcome</h2>
-                <p class="subtitle">Sign in to your smart parking account</p>
-                <form action="#" method="post">
+                <p class="subtitle">Log in to your smart parking account</p>
+                <form action="#" method="post" id="studentLogin">
                     <div class="form-group">
-                        <label for="username">Username</label>
-                        <input type="text" id="username" name="username" placeholder="Enter username">
+                        <label for="username">Student ID</label>
+                        <input type="text" id="studentId" name="studentId" placeholder="Enter Student ID">
+                        <p class="error-text"></p>
                     </div>
                     <div class="form-group">
                         <label for="password">Password</label>
                         <input type="password" id="password" name="password" placeholder="Enter password">
+                        <p class="error-text"></p>
                     </div>
+
+                    <p class="login-error" id="loginError"></p>
+
+                    
                     <a href="#" class="forgot-password">Forgot password?</a>
-                   <a href="studentDash.html" class="login-button">Log in</a> 
+                    <button type="submit" class="login-button">Log in</button>
                 </form>
-                <p class="account">Do you have an account? <a href="registration.html">Create account</a></p>
+                <p class="account">Don't you have an account?<a href="registration.html"> Create account</a></p>
             </section>
         </main>
+        <script src="login.js"></script>
     </body>
 </html>
