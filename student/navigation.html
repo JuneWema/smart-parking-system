@@ -1,0 +1,129 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+        <title>Parking navigation</title>
+        <script src="https://kit.fontawesome.com/6c491f9239.js"></script>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="navigation.css">
+    </head>
+    <body>
+        <div class="sidebar">
+            <div class="logo"></div>
+            <ul class="menu">
+                <li>
+                    <a href="dashboard.html">
+                        <i class="fa-regular fa-house"></i>
+                        <span>Dashboard</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="booking.html">
+                        <i class="fa-solid fa-calendar"></i>
+                        <span>Book Space</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="feedback.html">
+                        <i class="fa-regular fa-comment-dots"></i>
+                        <span>Give Feedback</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="notification.html">
+                        <i class="fa-regular fa-bell"></i>
+                        <span>Notifications</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="contact.html">
+                        <i class="fa-solid fa-phone"></i>
+                        <span>Contact Us</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="settings.html">
+                       <i class="fa-solid fa-gear"></i>
+                        <span>Settings</span>
+                    </a>
+                </li>
+                <li class="active">
+                    <a href="navigation.html">
+                      <i class="fa-solid fa-location-dot"></i>
+                        <span>Navigation Map</span>
+                    </a>
+                </li>
+                <li class="logout">
+                    <a href="../role-selection/roleSelection.html">
+                        <i class="fa-solid fa-right-from-bracket"></i>
+                        <span>Log out</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="main--content">
+            <div class="header--wrapper">
+                <div class="header--title">
+                    <span>Hello,</span>
+                    <h2>Welcome Back</h2>
+                </div>
+                <div class="user--info">
+                    <div class="search--box">
+                        <i class="fa-solid fa-magnifying-glass" id="search"></i>
+                        <input type="text" placeholder="search"> 
+                    </div>
+                    <img src="../images/studentDp.jpg" alt="Joyce Omondi">
+                </div>
+            </div>
+            <main>
+                <h1>Find your parking space</h1>
+                <p class="sub">Tap a bay to see the route from the entrance.</p>
+                <div class="map">
+                    <svg viewBox="0 0 1030 400" role="img" aria-label="Parking lot map">
+                        <rect width="1030" height="400" fill="var(--asphalt)"/>
+                        <text x="515" y="100" text-anchor="middle" fill="#8b929a" font-size="16" font-family="Barlow">main lane</text>
+                        <path d="M190 155H840" stroke="var(--paint)" stroke-width="3"/>
+                        <g font-family="Barlow Condensed" font-weight="700" font-size="22" fill="#fff">
+                            <rect x="25" y="150" width="120" height="40" fill="#e51400"/>
+                            <text x="85" y="177" text-anchor="middle">ENTRY</text>
+                            <rect x="885" y="150" width="120" height="40" fill="#e51400"/>
+                            <text x="945" y="177" text-anchor="middle">EXIT</text>
+                        </g>
+                        <g id="slots"></g>
+                        <path id="route" class="route" d=""/>
+                    </svg>
+                </div>
+                <div class="legend" aria-label="Legend">
+                    <span><i style="color:var(--free)"></i>Available</span>
+                    <span><i style="color:var(--held)"></i>Booked</span>
+                    <span><i style="color:var(--busy)"></i>Occupied</span>
+                </div>
+                <section class="panel" aria-live="polite">
+                    <div class="head">
+                        <h2 id="title"></h2>
+                        <span class="badge" id="badge"></span>
+                    </div>
+                    <div class="stats">
+                        <div>
+                            <b id="dist"></b>
+                            <span>distance</span>
+                        </div>
+                        <div>
+                            <b id="time"></b>
+                            <span>estimated time</span>
+                        </div>
+                    </div>
+                    <ol id="steps"></ol>
+                    <p class="note" id="note"></p>
+                </section>
+                <div class="demo">
+                    <span id="ctl"></span>  
+                </div> 
+            </main>
+        </div>
+        <script src="navigation.js"></script>
+    </body>
+</html>
