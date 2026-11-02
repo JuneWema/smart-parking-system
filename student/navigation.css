@@ -454,7 +454,7 @@ main{
     --paint: #e9e7df;
     --free: #1fa463;
     --busy: #d6402f;
-    --held: #e0a100;
+    --held: #2f6fdb;
     color: var(--ink);
 }
 main h1{

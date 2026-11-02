@@ -1,11 +1,9 @@
 
-
-// ----- 1. Settings you can change -----
-var metersPerPixel = 0.08;   // how many metres one map pixel is worth
-var speed = 2.2;             // car speed in metres per second (about 8 km/h)
+var metersPerPixel = 0.5;   // 1 map pixel = 0.1 meters
+var speed = 5.0;             // car speed: 2.2 metres per second (about 8 km/h)
 var entryX = 85;             // where the ENTRY gate is on the map
-var entryY = 170;
-var laneY = 110;             // height of the main lane
+var entryY = 195;
+var laneY = 100;             // height of the main lane
 var firstBayX = 190;         // where P1 starts
 var bayWidth = 130;
 
@@ -18,12 +16,11 @@ var bays = [
   { name: "P5", status: "occupied" }
 ];
 
-var colors = { available: "#1fa463", booked: "#e0a100", occupied: "#d6402f" };
+var colors = { available: "#1fa463", booked: "#2f6fdb", occupied: "#d6402f" };
 var labels = { available: "Available", booked: "Booked", occupied: "Occupied" };
 
 var selected = 0;   // 0 means P1, 1 means P2, and so on
 
-// ----- 3. Get the page elements -----
 var slotsGroup = document.getElementById("slots");
 var routeLine = document.getElementById("route");
 var stepsList = document.getElementById("steps");
@@ -34,7 +31,6 @@ var timeBox = document.getElementById("time");
 var noteBox = document.getElementById("note");
 var controlsBox = document.getElementById("ctl");
 
-// ----- 4. Helper functions -----
 function bayCenter(index) {
   return firstBayX + bayWidth * index + bayWidth / 2;
 }
@@ -176,7 +172,7 @@ function showRoute() {
   if (bay.status === "available") {
     noteBox.textContent = "Green route: this bay is free.";
   } else if (bay.status === "booked") {
-    noteBox.textContent = "Amber route: this bay is booked by someone else.";
+    noteBox.textContent = "Blue route: this bay is booked by someone else.";
   } else {
     noteBox.textContent = "Red route: this bay is occupied right now.";
   }

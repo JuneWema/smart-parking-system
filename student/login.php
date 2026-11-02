@@ -28,7 +28,7 @@ if ($student && password_verify($password, $student['password_hash'])) {
     $_SESSION['student_id'] = $student['student_id'];
     $_SESSION['full_name']  = $student['full_name'];
 
-    header('Location: studentDash.php');
+    header('Location: studentDash.html');
     exit;
 }
 
