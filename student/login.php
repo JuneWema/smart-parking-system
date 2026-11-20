@@ -15,7 +15,7 @@ if (!preg_match('/^\d{6}$/', $studentId) || $password === '') {
     exit;
 }
 
-$pdo = new PDO('mysql:host=localhost;dbname=smart-parking;charset=utf8mb4', 'db_user', 'db_pass', [
+$pdo = new PDO('mysql:host=localhost;dbname=smart-parking;charset=utf8mb4', 'root', '', [
     PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION
 ]);
 
@@ -28,7 +28,7 @@ if ($student && password_verify($password, $student['password_hash'])) {
     $_SESSION['student_id'] = $student['student_id'];
     $_SESSION['full_name']  = $student['full_name'];
 
-    header('Location: studentDash.html');
+    header('Location: dashboard.html');
     exit;
 }
 
