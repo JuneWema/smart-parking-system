@@ -3,11 +3,11 @@
 //echo '<pre>'; print_r($_POST); echo '</pre>'; exit;
 // register.php: handles the student registration form
  
-// ---------- Database settings (default XAMPP) ----------
+
 const DB_HOST = 'localhost';
 const DB_NAME = 'smart-parking';
-const DB_USER = 'root';      // default XAMPP user
-const DB_PASS = '';          // default XAMPP password is empty
+const DB_USER = 'root';  
+const DB_PASS = '';         
  
 // Only accept POST requests
 if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
