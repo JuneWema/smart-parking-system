@@ -232,10 +232,13 @@ textarea{
     cursor: pointer;
     transition: 0.2s ease;
 }
+.stars input:checked ~ label,
 .stars label:hover,
-.stars label:hover ~ label,
-.stars label:checked ~ label {
+.stars label:hover ~ label {
     color: #f59e0b;
+}
+
+.stars label:hover {
     transform: scale(1.08);
 }
 .submit--btn{
@@ -260,4 +263,22 @@ textarea{
     color: rgb(219, 6, 6);
     font-size: 14px;
     font-weight: 600;
+}
+
+
+/* Hide the radio without display:none, so "required" still works */
+.experience input,
+.stars input {
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
+    padding: 0;
+    border: none;
+}
+
+/* Style the label of the checked radio */
+.experience input:checked + label {
+    background: brown;
+    transform: translateY(-3px);
 }
