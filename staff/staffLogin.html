@@ -24,7 +24,25 @@
                 <a href="../role-selection/roleSelection.html" class="back"> <button class="back-button">Go Back</button></a>
                 <h2>Welcome</h2>
                 <p class="subtitle">Sign in to your smart parking account</p>
-                <form action="#" method="post">
+                 <form action="../staff/staffLogin.php" method="post" id="staffLogin">
+                    <div class="form-group">
+                        <label for="staffId">Staff ID</label>
+                        <input type="text" id="staffId" name="staffId" placeholder="Enter Staff ID">
+                        <p class="error-text"></p>
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <input type="password" id="password" name="password" placeholder="Enter password">
+                        <p class="error-text"></p>
+                    </div>
+
+                    <p class="login-error" id="loginError"></p>
+
+                    
+                    <a href="#" class="forgot-password">Forgot password?</a>
+                    <button type="submit" class="login-button">Log in</button>
+                </form>
+                <!-- <form action="../staff/staffLogin.php" method="post" id="staffLogin">
                     <div class="form-group">
                         <label for="username">Username</label>
                         <input type="text" id="username" name="username" placeholder="Enter username">
@@ -35,9 +53,10 @@
                     </div>
                     <a href="#" class="forgot-password">Forgot password?</a>
                     <button type="submit" class="login-button">Log in</button>
-                </form>
-                <p class="account">Do you have an account? <a href="staffRegistration.html">Create account</a></p>
+                </form> -->
+                <p class="account">Do you have an account? <a href="../staff/staffRegistration.html">Create account</a></p>
             </section>
         </main>
+        <script src="../staff/staffLogin.js"></script>
     </body>
 </html>

@@ -6,6 +6,7 @@ const identification = document.getElementById('identification');
 const telephone = document.getElementById('telephone');
 const regNumber = document.getElementById('regNumber');
 const carType = document.getElementById('carType');
+const color = ocument.getElementById('color');
 const pass1 = document.getElementById('pass1');
 const pass2 = document.getElementById('pass2');
 
@@ -46,6 +47,7 @@ const validateInputs = () => {
     const idValue = identification.value.trim();
     const telephoneValue = telephone.value.trim();
     const regNumberValue = regNumber.value.trim();
+    const colorValue = color.value.trim();
     const carTypeValue = carType.value;
     const pass1Value = pass1.value;
     const pass2Value = pass2.value;
@@ -76,6 +78,10 @@ const validateInputs = () => {
         setError(regNumber, 'Vehicle registration number is required.'); valid = false;
     } else setSuccess(regNumber);
 
+    if (colorValue === '') {
+        setError(color, 'Vehicle color is required.'); valid = false;
+    } else setSuccess(color);
+
     if (carTypeValue === '') {
     setError(carType, 'Please select a vehicle type.'); valid = false;
     } else setSuccess(carType);
@@ -96,83 +102,3 @@ const validateInputs = () => {
 
     return valid;
 };
-/*const studentRegForm = document.getElementById('studentRegForm');
-const fullName = document.getElementById('fullName');
-const email = document.getElementById('email');
-const telephone = document.getElementById('telephone');
-const regNumber = document.getElementById('regNumber');
-const pass1 = document.getElementById('pass1');
-const pass2 = document.getElementById('pass2');
-
-
-studentRegForm.addEventListener('submit', e => {
-    e.preventDefault();
-
-    validateInputs();
-});
-
-const setError = (element, message) => {
-    const formGroup = element.parentElement;
-    const errorDisplay = formGroup.querySelector('.error');
-
-    errorDisplay.innerText = message;
-    formGroup.classList.add('error');
-    formGroup.classList.remove('success');
-
-}
-
-const setSuccess = element => {
-    const formGroup = element.parentElement;
-    const errorDisplay = formGroup.querySelector('.success');
-
-    errorDisplay.innerText = "";
-    formGroup.classList.add('success');
-    formGroup.classList.remove('error');
-
-}
-
-const isValidEmail = email => {
-    const re = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}$/;
-    return re.test(String(email).toLowerCase());
-}
-
-const validateInputs = () => {
-    fullNameValue = fullName.value.trim();
-    emailValue = email.value.trim();
-    telephoneValue = telephone.value.trim();
-    regNumberValue = regNumber.value.trim();
-    pass1Value = pass1.value.trim();
-    pass2Value = pass2.value.trim();
-
-    if(fullNameValue === ""){
-        setError(fullName, 'Full Name is Required.');
-    } else {
-        setSuccess(fullName);
-    }
-
-    if(emailValue === '') {
-        setError(email, 'Email is required.');
-    } else if(!isValidEmail(emailValue)) {
-        setError(email, 'Provide a valid email address.');
-    } else {
-        setSuccess(email);
-    }
-
-    if(pass1Value === '') {
-        setError(pass1, 'Password is required.');
-    } else if(pass1Value.length < 8 ) {
-        setError(pass1, 'Password MUST be at least 8 characters.');
-    } else {
-        setSuccess(pass1);
-    }
-
-    if(pass2Value === '' ) {
-        setError(pass2, 'Please confirm your password.');
-    } else if(pass1Value !== pass2Value) {
-        setError(pass2, 'Passwords do not match');
-    } else {
-        setSuccess(pass2);
-    }
-
-};
-*/
