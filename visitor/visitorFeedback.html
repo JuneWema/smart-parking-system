@@ -18,7 +18,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="access.html">
+                    <a href="access.php">
                         <i class="fa-solid fa-key"></i>
                         <span>Access Code</span>
                     </a>
@@ -42,9 +42,15 @@
                     </a>
                 </li>
                 <li>
-                    <a href="visitorSettings.html">
+                    <a href="visitorSettings.php">
                        <i class="fa-solid fa-gear"></i>
                         <span>Settings</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="visitorNavigation.html">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <span>Navigation Map</span>
                     </a>
                 </li>
                 <li class="logout">
@@ -77,16 +83,16 @@
                     <h1>We'd love your feedback</h1>
                     <p>Your feedback helps us improve and build a better solution and better experiences</p>
                 </div>
-                <form>
+                <form action="../visitor/visitorFeedback.php" method="post">
                     <div class="form--group">
                         <div class="input--row">
                             <div>
                                 <label for="name" class="title">Your name</label>
-                                <input type="text" id="name" placeholder="June Wema"/>
+                                <input type="text" id="name" placeholder="June Wema" name="name"/>
                             </div>
                             <div>
                                 <label for="email" class="title">Email</label>
-                                <input type="email" id="email" placeholder="june.wema@gmail.com">
+                                <input type="email" id="email" placeholder="june.wema@gmail.com" name="email">
                             </div>
                         </div>
                     </div>
@@ -96,35 +102,35 @@
                             <option value="#">Suggest feedback type:</option>
                             <option value="suggestions"> Suggestions </option>
                             <option value="bug-report"> Bug Report </option>
-                            <option value="compliment"> Complement </option>
+                            <option value="compliment"> Compliment </option>
                             <option value="complaint"> Complaint </option>
                             <option value="other"> Other </option>
                         </select>
                     </div>
                     <div class="form--group">
-                        <label for="#" class="title"> How was your experience? </label>
+                        <label for="experience" class="title"> How was your experience? </label>
                         <div class="experience">
-                            <input type="radio" name="experience" id="terrible">
+                            <input type="radio" name="experience" id="terrible" value="Terrible">
                             <label for="terrible">
                                 <i class="fa-solid fa-face-sad-cry yellow"></i>
                                 <span>Terrible</span>
                             </label>
-                            <input type="radio" name="experience" id="bad">
+                            <input type="radio" name="experience" id="bad" value="Bad">
                             <label for="bad">
                                 <i class="fa-solid fa-face-frown yellow"></i>
                                 <span>Bad</span>
                             </label>
-                            <input type="radio" name="experience" id="okay">
+                            <input type="radio" name="experience" id="okay" value="Okay">
                             <label for="okay">
                                 <i class="fa-solid fa-face-meh-blank yellow"></i>
                                 <span>Okay</span>
                             </label>
-                            <input type="radio" name="experience" id="good">
+                            <input type="radio" name="experience" id="good" value="Good">
                             <label for="good">
                                 <i class="fa-solid fa-face-smile yellow"></i>
                                 <span>Good</span>
                             </label>
-                            <input type="radio" name="experience" id="excellent">
+                            <input type="radio" name="experience" id="excellent" value="Excellent">
                             <label for="excellent">
                                <i class="fa-solid fa-face-grin-hearts yellow"></i>
                                <span>Excellent</span>
@@ -132,33 +138,26 @@
                         </div>
                     </div>
                     <div class="form--group">
-                        <label for="#" class="title"> Rate your overall Experience: </label>
+                        <label for="rating" class="title"> Rate your overall Experience: </label>
                         <div class="stars">
-                            <input type="radio" name="rating" id="star1">
-                            <label for="star1">
-                                <i class="fa-solid fa-star"></i>
-                            </label>
-                            <input type="radio" name="rating" id="star2">
-                            <label for="star2">
-                                <i class="fa-solid fa-star"></i>
-                            </label>
-                            <input type="radio" name="rating" id="star3">
-                            <label for="star3">
-                                <i class="fa-solid fa-star"></i>
-                            </label>
-                            <input type="radio" name="rating" id="star4">
-                            <label for="star4">
-                                <i class="fa-solid fa-star"></i>
-                            </label>
-                            <input type="radio" name="rating" id="star5">
-                            <label for="star5">
-                                <i class="fa-solid fa-star"></i>
-                            </label>
+                            <input type="radio" name="rating" id="star5" value="5" required>
+                            <label for="star5"><i class="fa-solid fa-star"></i></label>
+
+                            <input type="radio" name="rating" id="star4" value="4">
+                            <label for="star4"><i class="fa-solid fa-star"></i></label>
+
+                            <input type="radio" name="rating" id="star3" value="3">
+                            <label for="star3"><i class="fa-solid fa-star"></i></label>
+
+                            <input type="radio" name="rating" id="star2" value="2">
+                            <label for="star2"><i class="fa-solid fa-star"></i></label>
+
+                            <input type="radio" name="rating" id="star1" value="1">
+                            <label for="star1"><i class="fa-solid fa-star"></i></label>
                         </div>
-                    </div>
                     <div class="form--group">
                         <label for="message" class="title"> Tell us more </label>
-                        <textarea name="feedback" id="message" placeholder= "Kindly provide further ellaboration on your thoughts or experiences..." >  
+                        <textarea name="message" id="message" placeholder= "Kindly provide further ellaboration on your thoughts or experiences..." >  
                         </textarea>
                     </div>
                     <button type="submit" class="submit--btn"> Send Feedback</button>
