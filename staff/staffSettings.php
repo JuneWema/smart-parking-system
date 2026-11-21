@@ -73,7 +73,7 @@ if (!$staff) {
                     </a>
                 </li>
                 <li>
-                    <a href="staffNotifcation.html">
+                    <a href="staffNotification.html">
                         <i class="fa-regular fa-bell"></i>
                         <span>Notifications</span>
                     </a>
