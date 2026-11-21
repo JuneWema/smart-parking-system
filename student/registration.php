@@ -34,6 +34,7 @@ $email          = strtolower(trim($_POST['email'] ?? ''));
 $identification = trim($_POST['identification'] ?? '');
 $telephone      = preg_replace('/\s+/', '', trim($_POST['telephone'] ?? ''));
 $regNumber      = strtoupper(trim($_POST['regNumber'] ?? ''));
+$color          = $_POST['color'] ?? '';
 $carType        = $_POST['carType'] ?? '';
 $pass1          = $_POST['pass1'] ?? '';
 $pass2          = $_POST['pass2'] ?? '';
@@ -120,10 +121,10 @@ $hash = password_hash($pass1, PASSWORD_DEFAULT);
  
 try {
     $stmt = $pdo->prepare(
-        'INSERT INTO students (student_id, full_name, email, phone, reg_number, car_type, password_hash)
-         VALUES (?, ?, ?, ?, ?, ?, ?)'
+        'INSERT INTO students (student_id, full_name, email, phone, reg_number, color, car_type, password_hash)
+         VALUES (?, ?, ?, ?, ?, ?, ?, ?)'
     );
-    $stmt->execute([$identification, $fullName, $email, $telephone, $regNumber, $carType, $hash]);
+    $stmt->execute([$identification, $fullName, $email, $telephone, $regNumber, $color, $carType, $hash]);
 } catch (PDOException $e) {
     // 23000 = duplicate key (e.g. two people registering at the same moment)
     if ($e->getCode() === '23000') {
