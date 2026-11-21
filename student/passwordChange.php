@@ -2,8 +2,8 @@
 // Changes the student's password. The password form in settings.php sends data here.
 // Uses the column "password_hash" (same as login.php) and KEY_COLUMN from auth.php.
 
-require "db.php";
-require "auth.php";
+require "settingsDb.php";
+require "settingsAuth.php";
 
 if ($_SERVER["REQUEST_METHOD"] !== "POST") {
     header("Location: settings.php");
@@ -45,51 +45,3 @@ $stmt->execute();
 $stmt->close();
 
 redirectWithMessage("password", true, "Your password has been changed.");
-// Changes the student's password. The password form in settings.php sends data here.
-
-/*require "settingsDb.php";
-require "settingsAuth.php";
-
-if ($_SERVER["REQUEST_METHOD"] !== "POST") {
-    header("Location: settings.php");
-    exit;
-}
-
-// 1. Read the form values (do NOT trim passwords: spaces can be part of them)
-$currentPassword = $_POST["currentPassword"] ?? "";
-$newPassword     = $_POST["newPassword"] ?? "";
-$confirmPassword = $_POST["confirmPassword"] ?? "";
-
-// 2. Get the stored (hashed) password for this student
-$stmt = $conn->prepare("SELECT password FROM students WHERE id = ?");
-$stmt->bind_param("i", $studentId);
-$stmt->execute();
-$row = $stmt->get_result()->fetch_assoc();
-$stmt->close();
-
-// 3. Validate
-if (!$row || !password_verify($currentPassword, $row["password"])) {
-    redirectWithMessage("password", false, "Your current password is incorrect.");
-}
-if (strlen($newPassword) < 8) {
-    redirectWithMessage("password", false, "The new password must be at least 8 characters.");
-}
-if ($newPassword !== $confirmPassword) {
-    redirectWithMessage("password", false, "The new passwords do not match.");
-}
-if ($newPassword === $currentPassword) {
-    redirectWithMessage("password", false, "The new password must be different from the current one.");
-}
-
-// 4. Save the HASH, never the plain password
-$newHash = password_hash($newPassword, PASSWORD_DEFAULT);
-
-$stmt = $conn->prepare("SELECT password FROM students WHERE " . KEY_COLUMN . " = ?");
-$stmt->bind_param("s", $studentId);
-$stmt = $conn->prepare("UPDATE students SET password = ? WHERE " . KEY_COLUMN . " = ?");
-$stmt->bind_param("ss", $newHash, $studentId);
-$stmt->execute();
-$stmt->close();
-
-redirectWithMessage("password", true, "Your password has been changed.");
-*/
