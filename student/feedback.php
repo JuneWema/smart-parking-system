@@ -33,11 +33,13 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     }
 
     $stmt = $conn->prepare(
-        "INSERT INTO student_feedback (name, email, type, experience, rating, message)
-         VALUES (?, ?, ?, ?, ?, ?)"
+    "INSERT INTO student_feedback
+        (name, email, type, experience, rating, message)
+     VALUES (?, ?, ?, ?, ?, ?)"
     );
-    $stmt->bind_param("ssssis", $name, $email, $type, $experience, $rating, $message);
-
+    $stmt->bind_param("ssssis",
+    $name, $email, $type, $experience, $rating, $message
+    );
     if ($stmt->execute()) {
         header("Location: feedback.html?success=1");
         exit;
