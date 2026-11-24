@@ -121,4 +121,52 @@ body{
 }
 
 
+.manage{
+    background: mintcream;
+    padding: 14px;
+    border-radius: 10px;
+    margin-bottom: 25px;
+}
+.manage h1{
+    color: darkcyan;
+}
+.add_user{
+    margin: 10px;
+    color: maroon;
+}
+
+table{
+    width: 100%;
+    border-collapse: collapse;
+}
+thead{
+    background: darkcyan;
+    color: #fff;
+}
+th{
+    padding: 15px;
+    text-align: left;
+}
+tbody{
+    background: #f2f2f2;
+}
+td{
+    padding: 15px;
+    font-size: 14px;
+    color: #333;
+}
+tr:nth-child(even){
+    background: #fff;
+}
+tfoot{
+    background: darkcyan;
+}
+tfoot td{
+    padding: 15px;
+    text-align: center;
+    color: #fff;
+    font-weight: 600;
+    font-family: monospace;
+    font-size: 20px;
+}
 

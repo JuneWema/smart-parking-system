@@ -1,0 +1,674 @@
+
+
+*{
+    margin: 0;
+    padding: 0;
+    outline: none;
+    border: none;
+    box-sizing: border-box;
+    font-family: 'Times New Roman', Times, serif;
+}
+body{
+    display: flex;
+}
+.sidebar{
+    position: sticky;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 110px;
+    height: 100vh;
+    padding: 0 1.7rem;
+    color: #fff;
+    overflow: hidden;
+    transition: all 0.5s linear;
+    background: darkcyan;
+}
+.sidebar:hover{
+    width: 240px;
+    transition: 0.5s;
+}
+.logo{
+    height: 80px;
+    padding: 16px;
+}
+.menu{
+    height: 88%;
+    position: relative;
+    list-style: none;
+    padding: 0;
+}
+.menu li{
+    padding: 1rem;
+    margin: 8px 0;
+    border-radius: 8px;
+    transition: all 0.5s ease-in-out;            /* was "o.5s" (typo) */
+}
+.menu li:hover,
+.active{
+    background:darkkhaki;
+}
+.menu a{
+    color: #fff;
+    font-size: 14px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+.menu a span{
+    overflow: hidden;
+}
+.menu a i{
+    font-size: 1.2rem;
+}
+.logout{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+
+.main--content{
+    position: relative;
+    background: khaki;
+    width: 100%;
+    min-width: 0;                                /* stops wide content pushing the page sideways */
+    padding: 1rem;
+}
+.header--wrapper img{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.header--wrapper{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    background: mintcream;
+    border-radius: 10px;
+    padding: 10px 2rem;
+    margin-bottom: 1rem;
+}
+.header--title{
+    color: darkcyan;
+}
+.user--info{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+.search--box{
+    background: rgba(237, 237, 237);
+    border-radius: 15px;
+    color: rgba(113, 99, 186, 255);
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    padding: 4px 12px;
+}
+.search--box input{
+    background: transparent;
+    padding: 5px;
+}
+#search{
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: all 0.5s ease-out;
+}
+.search--box #search:hover{
+    transform: scale(1.2);
+}
+
+/* ---------- Today's data (stat cards) ---------- */
+.card--container{
+    background: mintcream;
+    padding: 2rem;
+    border-radius: 10px;
+    margin-bottom: 25px;
+}
+.card--wrapper{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+.main--title{
+    color: darkcyan;
+    padding-bottom: 10px;
+    font-size: 20px;
+}
+/* Scoped to .card--wrapper so these no longer collide with the parking-space cards */
+.card--wrapper .parking--card{
+    background: rgba(229, 223, 223);
+    border-radius: 10px;
+    padding: 1.2rem;
+    width: 270px;
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: all 0.5s ease-in-out;
+}
+.card--wrapper .parking--card:hover{
+    transform: translateY(-5px);
+}
+.card--header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.space{
+    display: flex;
+    flex-direction: column;
+}
+.title{
+    font-size: 20px;
+    font-weight: 400;
+}
+.space--value{
+    font-size: 24px;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 600;
+}
+.parking--icon{                                   /* replaces the duplicated id="parking" */
+    color: #fff;
+    padding: 1rem;
+    height: 40px;
+    width: 40px;
+    text-align: center;
+    border-radius: 50%;
+    background: red;
+}
+.card--detail{
+    font-size: 18px;
+    color: #777777;
+    letter-spacing: 2px;
+    font-family: 'Courier New', Courier, monospace;
+}
+.card--wrapper .light-red{    background: rgb(255, 127, 127); }
+.card--wrapper .light-purple{ background: rgb(218, 177, 218); }
+.card--wrapper .light-green{  background: rgb(144, 238, 144); }
+.card--wrapper .light-blue{   background: rgb(173, 216, 230); }
+
+/* ---------- Parking spaces section ---------- */
+.parking--sections,
+.payment--section{
+    background: mintcream;
+    border-radius: 10px;
+    padding: 25px;
+    margin-bottom: 25px;
+}
+.section--heading{
+    display: flex;
+    justify-content: space-between;               /* was gap: 750px, which overflowed the page */
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+.section--heading h2,
+.payment--heading h2{
+    font-size: 30px;
+    margin-bottom: 8px;
+    color: darkcyan;
+}
+.section--heading p,
+.payment--heading p{
+    color: darkcyan;
+    font-size: 15px;
+}
+.section--actions{
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+.live--status{
+    color: #22C55E;
+    font-size: 14px;
+    white-space: nowrap;
+}
+.add--btn{
+    background: darkcyan;
+    color: #fff;
+    padding: 10px 18px;
+    border-radius: 8px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+.add--btn:hover{
+    background: #007070;
+}
+
+/* Grid grows automatically as the admin adds spaces */
+.parking--grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+    gap: 15px;
+}
+.parking--grid .parking--card{
+    border: 1px dashed;
+    border-radius: 10px;
+    padding: 20px 12px;
+    text-align: center;
+    background: #ffffff;
+    align-items: center;
+    gap: 15px;
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+.parking--grid .parking--card:hover{
+    transform: translateY(-5px);
+}
+.parking--card h3{
+    font-size: 30px;
+}
+.car--icon{
+    width: 100%;
+    padding: 14px 0;
+    border-radius: 10px;
+    background: darkcyan;
+    font-size: 30px;
+}
+.edit--hint{
+    font-size: 12px;
+    color: #555;
+}
+.parking--grid .available{
+    border: 5px solid #18a566;
+    background-color: #f2fbf6;
+}
+.parking--grid .available .car--icon{
+    background: #d9f4e5;
+}
+.parking--grid .available .status{
+    background: #159957;
+    border-radius: 8px;
+    padding: 8px;
+}
+.parking--grid .occupied{
+    border: 5px solid #d94b4b;
+    background: #fff7f7;
+}
+.parking--grid .occupied .car--icon{
+    background: #ffe5e5;
+}
+.parking--grid .occupied .status{
+    background: #e54848;
+    border-radius: 8px;
+    padding: 8px;
+}
+.parking--grid .booked{
+    border: 5px solid #175bc1;
+    background: #f0f5ff;
+}
+.parking--grid .booked .car--icon{
+    background: #dbeafe;
+}
+.parking--grid .booked .status{
+    background: #175bc1;
+    border-radius: 8px;
+    padding: 8px;
+}
+
+/* ---------- Add / Edit modal ---------- */
+.modal{
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.45);
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+.modal.open{
+    display: flex;
+}
+.modal--box{
+    background: #fff;
+    padding: 24px;
+    border-radius: 12px;
+    width: 90%;
+    max-width: 380px;
+}
+.modal--box h3{
+    color: darkcyan;
+    margin-bottom: 16px;
+}
+.modal--box label{
+    display: block;
+    margin: 12px 0 4px;
+    font-size: 14px;
+}
+.modal--box input,
+.modal--box select{
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 14px;
+}
+.modal--box small{
+    display: block;
+    margin-top: 6px;
+    font-size: 12px;
+    color: #666;
+}
+#spaceError{
+    color: #c0392b;
+    font-size: 13px;
+    margin-top: 8px;
+    min-height: 16px;
+}
+.modal--buttons{
+    display: flex;
+    gap: 8px;
+    margin-top: 20px;
+}
+.modal--buttons button{
+    padding: 10px 18px;
+    border-radius: 8px;
+    font-size: 14px;
+    cursor: pointer;
+}
+.btn--save{   background: darkcyan; color: #fff; }
+.btn--cancel{ background: #eee; }
+.btn--delete{ background: #c0392b; color: #fff; margin-left: auto; }
+/* *{
+    margin: 0;
+    padding: 0;
+    outline: none;
+    border: none;
+    box-sizing: border-box;
+    font-family: 'Times New Roman', Times, serif;
+}
+body{
+    display: flex;
+}
+.sidebar{
+    position: sticky;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 110px;
+    height: 100vh;
+    padding: 0 1.7rem;
+    color: #fff;
+    overflow: hidden;
+    transition: all 0.5s linear;
+    background: darkcyan;
+}
+.sidebar:hover{
+    width: 240px;
+    transition: 0.5s;
+}
+.logo{
+    height: 80px;
+    padding: 16px;
+}
+.menu{
+    height: 88%;
+    position: relative;
+    list-style: none;
+    padding: 0;
+}
+.menu li{
+    padding: 1rem;
+    margin: 8px 0;
+    border-radius: 8px;
+    transition: all o.5s ease-in-out;
+}
+.menu li:hover,
+.active{
+    background:darkkhaki;
+}
+.menu a{
+    color: #fff;
+    font-size: 14px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+.menu a span{
+    overflow: hidden;
+}
+.menu a i{
+    font-size: 1.2rem;
+}
+.logout{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+
+.main--content{
+    position: relative;
+    background: khaki;
+    width: 100%;
+    padding: 1rem;
+}
+.header--wrapper img{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.header--wrapper{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    background: mintcream;
+    border-radius: 10px;
+    padding: 10px 2rem;
+    margin-bottom: 1rem;
+}
+.header--title{
+    color: darkcyan;
+}
+.user--info{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+.search--box{
+    background: rgba(237, 237, 237);
+    border-radius: 15px;
+    color: rgba(113, 99, 186, 255);
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    padding: 4px 12px;
+}
+.search--box input{
+    background: transparent;
+    padding: 5px;
+}
+#search{
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: all 0.5s ease-out;
+}
+.search--box #search:hover{
+    transform: scale(1.2);
+}
+
+
+.card--container{
+    background: mintcream;
+    padding: 2rem;
+    border-radius: 10px;
+}
+.card--wrapper{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+.main--title{
+    color: darkcyan;
+    padding-bottom: 10px;
+    font-size: 20px;
+}
+.parking--card{
+    background: rgba(229, 223, 223);
+    border-radius: 10px;
+    padding: 1.2rem;
+    width: 270px;
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: all 0.5s ease-in-out;
+}
+.parking--card:hover{
+    transform: translateY(-5px);
+}
+.card--header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.space{
+    display: flex;
+    flex-direction: column;
+}
+.title{
+    font-size: 20px;
+    font-weight: 400;
+}
+.space--value{
+    font-size: 24px;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 600;
+}
+#parking{
+    color: #fff;
+    padding: 1rem;
+    height: 40px;
+    width: 40px;
+    text-align: center;
+    border-radius: 50%;
+    background: red;
+}
+.card--detail{
+    font-size: 18px;
+    color: #777777;
+    letter-spacing: 2px;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.light-red{
+    background: rgb(255, 127, 127);
+}
+.light-purple{
+    background: rgb(218, 177, 218);
+}
+.light-green{
+    background: rgb(144, 238, 144);
+}
+.light-blue{
+    background: rgb(173, 216, 230);
+}
+
+.parking--sections,
+.payment--section{
+    background: mintcream;
+    border-radius: 10px;
+    padding: 25px;
+    margin-bottom: 25px;
+    /* box-shadow: 0 3px 12px rgba(15, 38, 75, 0.06); 
+}
+.section--heading{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 750px;
+    margin-bottom: 20px;
+}
+.section--heading h2,
+.payment--heading h2{
+    font-size: 30px;
+    margin-bottom: 8px;
+    color: darkcyan;
+}
+.section--heading p,
+.payment--heading p{
+    color: darkcyan;
+    font-size: 15px;
+}
+.live--status{
+    color: #22C55E;
+    font-size: 14px;
+    white-space: nowrap;
+}
+.parking--grid{
+    display: grid;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    gap: 15px;
+}
+.parking--card{
+    border: 1px dashed;
+    border-radius: 10px;
+    padding: 20px 12px;
+    text-align: center;
+    background: #ffffff;
+    align-items: center;
+    gap: 15px;
+    display: flex;
+    flex-direction: column;
+}
+.parking--card h3{
+    font-size: 30px;
+}
+.car--icon{
+    width: 100%;
+    padding: 14px 0;
+    border-radius: 10px;
+    background: darkcyan;
+    font-size: 30px;
+}
+.available{
+    border: 5px solid #18a566;
+    background-color: #f2fbf6;
+}
+.available .car--icon{
+    background: #d9f4e5;
+}
+.available .status{
+    background: #159957;
+    border-radius: 8px;
+    padding: 8px;
+}
+.occupied{
+    border: 5px solid #d94b4b;
+    background: #fff7f7;
+}
+.occupied .car--icon{
+    background: #ffe5e5;
+}
+.occupied .status{
+    background: #e54848;
+    border-radius: 8px;
+    padding: 8px;
+}
+.booked{
+    border: 5px solid #175bc1;
+    background: #f0f5ff
+}
+.booked .car--icon{
+    background: #dbeafe;
+}
+.booked .status{
+    background: #175bc1;
+    border-radius: 8px;
+    padding: 8px;
+} 
+*/
